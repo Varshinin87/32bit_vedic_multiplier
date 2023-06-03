@@ -1,0 +1,9 @@
+module round(R,S,G,A,B,M);
+input R,S,G,A,B;
+output M;
+wire w1,w2,w3,w4,w5,w6,w7,w8,w9,w10,w11;
+SRK S1(G,B,A,w1,w2,w3);
+SRK S2(S,A,A,w4,w5,w6);
+SRK S3(w4,B,w3,w7,w8,w9);
+SRK S4(R,w9,w6,w10,w11,M);
+endmodule
