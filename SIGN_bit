@@ -1,0 +1,6 @@
+module sign_bit(a,b,s);
+input a,b;
+output s;
+wire w;
+FG f1(a,b,w,s);
+endmodule
