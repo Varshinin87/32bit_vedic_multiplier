@@ -1,0 +1,19 @@
+module FP_VM_tb;
+reg [31:0]X;
+reg [31:0]Y;
+wire S;
+wire [47:0]M;
+wire [47:0]N;
+wire [7:0]E;
+wire Eov;
+wire Round,Sticky,Carry;
+wire [22:0]R;
+wire I;
+wire [22:0]N1;
+wire [31:0]Z;
+FP_VM uut(.X(X),.Y(Y),.S(S),.M(M),.N(N),.E(E),.Eov(Eov),.Round(Round),.Sticky(Sticky),.Carry(Carry),.R(R),.I(I),.N1(N1),.Z(Z));
+initial begin
+X=32'b11111111111111111111111111111111;
+Y=32'b11111111111111111111111111111111;
+end
+endmodule
