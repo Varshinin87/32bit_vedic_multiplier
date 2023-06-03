@@ -1,0 +1,26 @@
+module exponent(x7,x6,x5,x4,x3,x2,x1,x0,y7,y6,y5,y4,y3,y2,y1,y0,carry,E7,E6,E5,E4,E3,E2,E1,E0,Eov);
+input x7,x6,x5,x4,x3,x2,x1,x0;
+input y7,y6,y5,y4,y3,y2,y1,y0;
+input carry;
+output E7,E6,E5,E4,E3,E2,E1,E0;
+output Eov;
+wire [44:1]w;
+OS O1(x0,0,w[1],w[2]);
+OS O2(x1,w[2],w[3],w[4]);
+OS O3(x2,w[4],w[5],w[6]);
+OS O4(x3,w[6],w[7],w[8]);
+OS O5(x4,w[8],w[9],w[10]);
+OS O6(x5,w[10],w[11],w[12]);
+OS O7(x6,w[12],w[13],w[14]);
+ZS Z1(x7,w[14],w[15],w[16]);
+HNG H1(y0,w[1],carry,0,w[17],w[18],E0,w[19]);
+HNG H2(y1,w[3],w[19],0,w[20],w[21],E1,w[22]);
+HNG H3(y2,w[5],w[22],0,w[23],w[24],E2,w[25]);
+HNG H4(y3,w[7],w[25],0,w[26],w[27],E3,w[28]);
+HNG H5(y4,w[9],w[28],0,w[29],w[30],E4,w[31]);
+HNG H6(y5,w[11],w[31],0,w[32],w[33],E5,w[34]);
+HNG H7(y6,w[13],w[34],0,w[35],w[36],E6,w[37]);
+HNG H8(y7,w[15],w[37],0,w[38],w[39],E7,w[40]);
+SRK S1(w[40],1,w[44],w[41],w[42],w[43]);
+FG F1(w[43],0,Eov,w[44]);
+endmodule
