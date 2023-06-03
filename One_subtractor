@@ -1,0 +1,7 @@
+module OS(S,Bi,Do,Boo);
+input S,Bi;
+output Do,Boo;
+wire w1,w2,w3;
+FG F1(Bi,1,w1,w2);
+PG P1(S,w2,1,w3,Do,Boo);
+endmodule
