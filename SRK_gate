@@ -1,0 +1,7 @@
+module SRK(A,B,C,P,Q,R);
+input A,B,C;
+output P,Q,R;
+assign P=A;
+assign Q=A^B^C;
+assign R=(~(A)&C)^(A&B);
+endmodule
