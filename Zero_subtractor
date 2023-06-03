@@ -1,0 +1,8 @@
+module ZS(S,Bi,Dz,Boz);
+input S,Bi;
+output Dz,Boz;
+wire w1,w2,w3,w4,w5;
+FG F1(S,1,w1,w2);
+FG F2(Bi,S,w3,Dz);
+PG P1(w2,w3,0,w4,w5,Boz);
+endmodule
