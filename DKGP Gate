@@ -1,9 +1,0 @@
-module DKGP(D,A,B,C,W,X,Y,Z);
-input D,A,B,C;
-output W,X,Y,Z;
-assign D=0;
-assign W=~B;
-assign X=A;
-assign Y=A^B^C;
-assign Z=(~A)&(B^C)^(B&C);
-endmodule
