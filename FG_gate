@@ -1,0 +1,6 @@
+module FG(A,B,X,Y);
+input A,B;
+output X,Y;
+assign X=A;
+assign Y=A^B;
+endmodule
