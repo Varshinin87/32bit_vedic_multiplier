@@ -1,8 +1,0 @@
-module PP(ai,aj,bi,bj,q);
-input ai,aj,bi,bj;
-output q;
-wire [8:1]w;
-PG prg1(ai,bj,1,w[1],w[2],w[3]);
-PG prg2(aj,bi,1,w[4],w[5],w[6]);
-PG prg3(w[3],w[6],1,w[7],w[8],q);
-endmodule
