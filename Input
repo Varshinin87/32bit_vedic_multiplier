@@ -1,0 +1,8 @@
+module ip(X,Y,a,b,c,d);
+input [7:0]X,Y;
+output [7:0]a,b,c,d;
+assign a=(~X)&Y;
+assign b=X&(~Y);
+assign c=(~X)&(~Y);
+assign d=X&Y;
+endmodule
