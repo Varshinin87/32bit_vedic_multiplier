@@ -1,8 +1,0 @@
-module HNG(A,B,C,D,W,X,Y,Z);
-input A,B,C,D;
-output W,X,Y,Z;
-assign W=A;
-assign X=B;
-assign Y=A^B^C;
-assign Z=((A^B)&C)^(A&B)^D;
-endmodule
