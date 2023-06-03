@@ -1,0 +1,7 @@
+module PG(A,B,C,X,Y,Z);
+input A,B,C;
+output X,Y,Z;
+assign X=A;
+assign Y=A^B;
+assign Z=(A&B)^C;
+endmodule
